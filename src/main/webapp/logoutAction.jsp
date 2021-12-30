@@ -3,11 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<link rel="stylesheet" href="css/custom.css">
+<meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8">
 <title>JPS 게시판 웹사이트</title>
 </head>
 <body>
+	<%
+		session.invalidate();
+	%>
 	<script>
 		location.href = 'main.jsp';
 	</script>
