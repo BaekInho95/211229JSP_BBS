@@ -10,6 +10,7 @@
 <body>
 	<script>
 		location.href = 'main.jsp';
+		//location.href : 참조
 	</script>
 </body>
 </html>

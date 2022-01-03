@@ -11,6 +11,7 @@ public class UserDAO {
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	
+	/* DB에 접속하는 메서드 */
 	public UserDAO() {
 		try {
 			String dbURL = "jdbc:mysql://localhost:3307/BBS";
@@ -23,10 +24,12 @@ public class UserDAO {
 		}
 	}
 	
+	/* 로그인을 시도하는 함수 */
 	public int login(String userID, String userPasswrod) {
 		String SQL = "SELECT userPassword FROM USER WHERE userID = ?";
 		try {
 			pstmt = conn.prepareStatement(SQL);
+			/* SQL Injection을 예방하기 위해 pstmt를 이용한다 */
 			pstmt.setString(1, userID);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
@@ -43,6 +46,7 @@ public class UserDAO {
 		return -2; //데이터베이스 오류
 	}
 	
+	/* 회원가입 메서드 */
 	public int join(User user) {
 		String SQL = "INSERT INTO USER VALUES(?, ?, ?, ?, ?)";
 		try {

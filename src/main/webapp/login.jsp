@@ -5,19 +5,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
 <meta name="viewport" content="width=device-width" , initial-scale="1">
+<!-- 반응형 웹을 사용하는 메타태그 -->
 <link rel="stylesheet" href="css/bootstrap.css">
+<!-- 디자인을 담당하는 CSS를 참조 -->
 <link rel="stylesheet" href="css/custom.css">
 <title>JPS 게시판 웹사이트</title>
 </head>
 <body>
 	<nav class="navbar navbar-default">
-		<div>
+	<!-- 네이게이션 : 하나의 웹 사이트에 전반적인 구성을 보여주는 역활 -->
+		<div class="navbar-header">
+		<!-- 헤더(웹) 만들기 : 사이트의 로고나 메뉴가 나오는 부분 -->
 			<button type="button" class="navbar-toggle collapsed"
 			data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
 			aria-expanded="false">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
+			<!-- 작대기 만들기 -->
 			</button>
 			<a class="navbar-brand" href="main.jsp">JSP 게시판 웹 사이트</a>
 		</div>
@@ -39,10 +44,12 @@
 			</ul>
 		</div>
 	</nav>
+	<!-- 로그인 화면 -->
 	<div class="container">
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4">
 			<div class="jumbotron" style="padding-top: 20px;">
+				<!-- 로그인 양식 -->
 				<form method="post" action="loginAction.jsp">
 					<h3 style="text-align: center;">로그인 화면</h3>
 					<div class="form-gruop">
@@ -59,5 +66,6 @@
 	</div>
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<!-- 자바스크립트에서 Jquery와 bootstrap을 참조 -->
 </body>
 </html>

@@ -8,6 +8,7 @@
 </head>
 <body>
 	<%
+		//세션 제거
 		session.invalidate();
 	%>
 	<script>

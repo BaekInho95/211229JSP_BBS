@@ -71,6 +71,9 @@
 			</ul>
 		</div>
 	</nav>
+	
+	
+	
 	<div class="container">
 		<div class="row">
 			<form method="post" action="updateAction.jsp?bbsID=<%= bbsID %>">

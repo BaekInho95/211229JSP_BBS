@@ -61,14 +61,19 @@
 			%>
 		</div>
 	</nav>
+	
+	<!-- 글쓰기 양식 디자인 -->
 	<div class="container">
 		<div class="row">
+			<!-- post : 보내지는 내용이 숨겨지도록 -->
 			<form method="post" action="writeAction.jsp">
 				<table class="table table=striped"
 					style="text-align: center; border: 1px solid #dddddd">
 					<thead>
 						<tr>
-							<th colspan="2"
+							<!-- colspan : 열 합치기
+							rowspan : 행 합치기 -->
+							<th colspan="2" 
 								style="background-color: #eeeeee; text-align: center;">게시판 글쓰기 양식</th>
 						</tr>
 					</thead>

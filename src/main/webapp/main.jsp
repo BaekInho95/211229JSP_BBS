@@ -11,6 +11,7 @@
 <title>JPS 게시판 웹사이트</title>
 </head>
 <body>
+	<!-- 로그인이 된 사람들은 그 정보를 담을 수 있게 해준다 -->
 	<% 
 			String userID = null;
 	if (session.getAttribute("userID") != null){
@@ -34,6 +35,7 @@
 			<li><a href="bbs.jsp">게시판</a></li>
 			</ul>
 			<%
+			//로그인이 되어있지 않다면 회원가입이나 로그인을 할 수 있도록
 				if(userID == null){
 			%>
 			<ul class="nav navbar-nav navbar-right">
@@ -49,6 +51,7 @@
 			</ul>
 			<%
 				} else {
+					//로그인이 되어있다면 로그아웃만 할 수 있도록
 			%>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
@@ -73,7 +76,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<div id="myCarousel" class="carousel" data-ride="carousel">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				<li data-target="#myCarousel" data-slide-to="1"></li>
@@ -81,15 +84,20 @@
 			</ol>
 			<ol class="carousel-inner">
 				<div class="item active">
-					<img src="images/fabi.jpg">
+					<img src="images/1.jpg">
 				</div>
-				<div class="item active">
-					<img src="images/liver.jpg">
+				<div class="item">
+					<img src="images/2.jpg">
 				</div>
-				<div class="item active">
-					<img src="images/naldum.jpg">
+				<div class="item">
+					<img src="images/3.jpg">
 				</div>
-				
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="rifht carousel-control" href="#myCarousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
 			</ol>
 		</div>
 	</div>

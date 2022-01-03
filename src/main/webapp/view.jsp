@@ -75,6 +75,8 @@
 			%>
 		</div>
 	</nav>
+	
+	<!-- 게시글 보기 -->
 	<div class="container">
 		<div class="row">
 			<table class="table table=striped"
@@ -89,6 +91,7 @@
 				<tbody>
 					<tr>
 						<td style="width: 20%;">글 제목</td>
+						<!-- 특수문자를 치환해서 Cross site scripting을 방지하는 효과 -->
 						<td colspan="2"><%= bbs.getBbsTitle().replaceAll(" ", "&nbsp")
 								.replaceAll("<", "&lt")
 								.replaceAll(">", "&gt")
@@ -124,6 +127,7 @@
 			<%
 					if(userID != null && userID.equals(bbs.getUserID())){
 				%>
+			<!-- 현재 사용자가 글의 주인과 동일하다면 수정, 삭제 버튼을 구현한다. -->
 			<a href="update.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">수정</a>
 			<a onclick="return confirm('정말로 삭제하시겠습니까?')" href="deleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">삭제</a>
 			<% 

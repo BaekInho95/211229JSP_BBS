@@ -30,6 +30,7 @@ request.setCharacterEncoding("UTF-8");
 		script.println("location.href = 'main.jsp'");
 		script.println("</script>");
 	}
+	/* 입력이 안 된 사항이 있을 때 */
 	if (user.getUserID() == null || user.getUserPassword() == null || user.getUserName() == null
 			|| user.getUserGender() == null || user.getUserEmail() == null) {
 		PrintWriter script = response.getWriter();
@@ -48,6 +49,7 @@ request.setCharacterEncoding("UTF-8");
 			script.println("history.back()");
 			script.println("</script>");
 		} else {
+			//세션 부여해주기
 			session.setAttribute("userID", user.getUserID());
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
